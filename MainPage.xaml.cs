@@ -43,12 +43,12 @@ namespace Music
             MusicManager.GetAllSongs(songs);
             MenuItems = new List<MenuItem>();
 
-            MenuItems.Add(new MenuItem { IconFile = "Assets/Icons/fastbeat.jpg", Category = SongCategory.FastBeat });
+            MenuItems.Add(new MenuItem { IconFile = "Assets/Icons/fastbeat1.jpg", Category = SongCategory.FastBeat });
 
-            MenuItems.Add(new MenuItem { IconFile = "Assets/Icons/melody.jpg", Category = SongCategory.Rhythms });
+            MenuItems.Add(new MenuItem { IconFile = "Assets/Icons/melody.jpg", Category = SongCategory.Melody });
 
-            MenuItems.Add(new MenuItem { IconFile = "Assets/Icons/rythms.jpg", Category = SongCategory.Melody });
-            MenuItems.Add(new MenuItem { IconFile = "Assets/Icons/rythms.jpg", Category = SongCategory.Melody });
+            MenuItems.Add(new MenuItem { IconFile = "Assets/Icons/rythms.jpg", Category = SongCategory.Rhythmes });
+          //  MenuItems.Add(new MenuItem { IconFile = "Assets/Icons/rythms.jpg", Category = SongCategory.Melody });
 
 
             BackButton.Visibility = Visibility.Collapsed;
@@ -193,6 +193,7 @@ namespace Music
             MusicManager.GetSongsCategory(songs, menuItem.Category);
 
             BackButton.Visibility = Visibility.Visible;
+            
 
         }
 
