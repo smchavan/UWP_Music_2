@@ -9,53 +9,37 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Grid>
-        <MediaPlayerElement Name="mediaElement" AutoPlay="True"
-                            AreTransportControlsEnabled="False"
-                            />
+        <ListView Name="Song_User" HorizontalAlignment="Left" VerticalAlignment="Top" 
+                  
+           Width="400" Height="990" Background="#ffe6e6" FontFamily="Verdana" FontSize="12" FontWeight="Bold">
+                    <ListView Name="songListView" 
+                          IsItemClickEnabled="True" 
+                          ItemClick="User_song_click" 
+                          ItemsSource="{x:Bind songsview}"
+                              Height="300"  Width="325"  Margin="0,0,0,0">
+                      <ListView.ItemTemplate>
+                      <DataTemplate x:DataType="local:Song">
+                        <StackPanel Orientation ="Horizontal" Height="44" >
+                            <Image Source="ms-appx:///Assets/Image/addsong.png" 
 
-        <!--  <MediaPlayerElement Name="mediaPlayer " AutoPlay="True"
-                            AreTransportControlsEnabled="False"/> -->
-        <!-- <MediaPlayerElement.TransportControls>
-            <MediaTransportControls IsCompact="True"/>
-        </MediaPlayerElement.TransportControls>
-        </MediaPlayerElement>
-      -->
-        <TextBlock Name="User_Collection" Text="User Collection" FontSize="24" />
+                                       Height="16" 
 
-        <!--  <StackPanel Margin="40">
-            <TextBlock Text="User_Collection"/>
-            <CheckBox Content="{x:Bind songs}" x:Name="song1Checkbox"
-              Click="playlistCheckbox_Click"/>
-            <CheckBox Content="{x:Bind songs}" x:Name="song2Checkbox" 
-              Click="playlistCheckbox_Click"/>
-            <CheckBox Content="{x:Bind songs}" x:Name="song3Checkbox"
-              Click="playlistCheckbox_Click"/>
-            <CheckBox Content="{x:Bind songs}" x:Name="song4Checkbox"
-              Click="playlistCheckbox_Click"/>  
--->
-        <!-- Display the selected toppings. 
-         <TextBlock Text="Toppings selected:"/>
-            <TextBlock x:Name="UserPlaylist"/>
-        </StackPanel> 
-        -->
+                                       Width="16"
+                                           HorizontalAlignment="Left"
+                                       ></Image>
+                            <TextBlock Text="{x:Bind SongName}"
+                                    HorizontalAlignment="Left" FontSize="18" />
+                        </StackPanel>
 
-
-<!--
-        <Button Content="CreatePlaylist" Click="CreatePlaylist"
-                  RelativePanel.AlignLeftWithPanel="True" 
-                                         
-                    Width="182" HorizontalAlignment="Left"
-                Height="89" Margin="80,0,0,0"
-                VerticalAlignment="Center"    />
-        <Button Content="BackButton" Click="BackButton_click"
-                  RelativePanel.AlignLeftWithPanel="True" 
-                                         
-                    Width="110" HorizontalAlignment="Left"
-                Height="59" Margin="80,250,200,110"
-                VerticalAlignment="Center"    />
+                    </DataTemplate>
+                        </ListView.ItemTemplate>
+                    </ListView>
+        </ListView>
         
-
--->
-
+        <MediaPlayerElement Name="mediaElement" AutoPlay="False"
+                            Margin="400,0,100,0"
+                Stretch="UniformToFill"  Background="BlanchedAlmond"
+                            PosterSource="ms-appx:///Assets/Image/song2.png"
+                            AreTransportControlsEnabled="True" />
     </Grid>
 </Page>

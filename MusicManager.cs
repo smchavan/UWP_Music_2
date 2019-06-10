@@ -73,9 +73,9 @@ namespace Music
             
             songs.Add(new Song("song2", SongCategory.FastBeat));
             songs.Add(new Song("song3", SongCategory.Melody));
-            songs.Add(new Song("song4", SongCategory.Rhythms));
-            songs.Add(new Song("song5", SongCategory.Rhythms));
-            songs.Add(new Song("song6", SongCategory.Melody));
+            songs.Add(new Song("song4", SongCategory.Melody));
+            songs.Add(new Song("song5", SongCategory.Rhythmes));
+            songs.Add(new Song("song6", SongCategory.Rhythmes));
            
             /*  
              * add to songs

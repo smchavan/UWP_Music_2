@@ -64,8 +64,15 @@ namespace Music
                // Category = ""
             };
             Song.saveSong(song);
+            //clear();
         }
-
+        private void clear()
+        {
+            Name.Text = " ";
+            Url.Text = " ";
+            ArtistName.Text = " ";
+            CoverPhoto.Text = " ";
+        }
         private void Back_Click(object sender, RoutedEventArgs e)
         {
             this.Frame.Navigate(typeof(MainPage));
@@ -89,7 +96,7 @@ namespace Music
             StorageFile selectedFile = await GetFileNameAsync(mediaPicker);
             if (selectedFile != null)
             {
-                this.Url.Text = selectedFile.Path;
+                this.Url.Text = selectedFile.Name;
             }
             else
             {
